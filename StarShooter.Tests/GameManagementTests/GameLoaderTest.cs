@@ -8,17 +8,16 @@ using Moq;
 using StarShooter.GameManagement;
 using StarShooter.GameManagement.Data;
 using StarShooter.GameManagement.Loader;
-using UnityEngine;
 
 namespace StarShooter.Tests.GameManagementTests
 {
     [TestClass]
-    public class LoaderTest
+    public class GameLoaderTest
     {
         private string testSceneName = "test_scene";
 
         [TestMethod]
-        public void LoadSceneTest()
+        public void GameLoader_LoadGame_NormalLoad()
         {
             GameInfo info = new GameInfo(1, "test_name");
 
@@ -27,16 +26,17 @@ namespace StarShooter.Tests.GameManagementTests
 
             var sceneManagerMock = new Mock<ISceneManager>();
 
-            string calledSceneName = "";
+            string loadedSceneName = "";
             sceneManagerMock.Setup(c => c.LoadScene(It.IsAny<string>()))
-                .Callback<string>((name) => calledSceneName = name);
+                .Callback<string>((name) => loadedSceneName = name);
 
             IGameLoader gameLoader = new GameLoader(sceneManagerMock.Object, bundlesManagerMock.Object);
             gameLoader.LoadGame(info);
 
             sceneManagerMock.Verify(c => c.LoadScene(It.IsAny<string>()), Times.Once());
             
-            Assert.AreEqual(calledSceneName, testSceneName);
+            Assert.AreEqual(loadedSceneName, testSceneName);
         }
+      
     }
 }

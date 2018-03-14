@@ -16,3 +16,9 @@ C:\Projects\Piupiu\StarShooter\StarShooter.Editor\bin\Debug\UnityEngine.xml
 C:\Projects\Piupiu\StarShooter\StarShooter.Editor\obj\Debug\StarShooter.Editor.csprojResolveAssemblyReference.cache
 C:\Projects\Piupiu\StarShooter\StarShooter.Editor\obj\Debug\StarShooter.Editor.dll
 C:\Projects\Piupiu\StarShooter\StarShooter.Editor\obj\Debug\StarShooter.Editor.pdb
+G:\Projects\Portfolio\StarShooter\StarShooter.Editor\bin\Debug\ClassLibrary.dll
+G:\Projects\Portfolio\StarShooter\StarShooter.Editor\bin\Debug\ClassLibrary.pdb
+G:\Projects\Portfolio\StarShooter\StarShooter.Editor\obj\Debug\StarShooter.Editor.csprojResolveAssemblyReference.cache
+G:\Projects\Portfolio\StarShooter\StarShooter.Editor\obj\Debug\StarShooter.Editor.csproj.CoreCompileInputs.cache
+G:\Projects\Portfolio\StarShooter\StarShooter.Editor\obj\Debug\ClassLibrary.dll
+G:\Projects\Portfolio\StarShooter\StarShooter.Editor\obj\Debug\ClassLibrary.pdb
