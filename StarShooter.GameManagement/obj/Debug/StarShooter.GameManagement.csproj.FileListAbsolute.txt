@@ -1,0 +1,6 @@
+C:\Projects\Piupiu\StarShooter\StarShooter.GameManagement\bin\Debug\StarShooter.GameManagement.dll
+C:\Projects\Piupiu\StarShooter\StarShooter.GameManagement\bin\Debug\StarShooter.GameManagement.pdb
+C:\Projects\Piupiu\StarShooter\StarShooter.GameManagement\bin\Debug\UnityEngine.dll
+C:\Projects\Piupiu\StarShooter\StarShooter.GameManagement\bin\Debug\UnityEngine.xml
+C:\Projects\Piupiu\StarShooter\StarShooter.GameManagement\obj\Debug\StarShooter.GameManagement.dll
+C:\Projects\Piupiu\StarShooter\StarShooter.GameManagement\obj\Debug\StarShooter.GameManagement.pdb
