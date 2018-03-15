@@ -65,19 +65,26 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
       </ItemGroup>
     </Otherwise>
   </Choose>
   <ItemGroup>
     <Compile Include="GameManagementTests\GameLoaderTest.cs" />
     <Compile Include="GameManagementTests\GamesListTest.cs" />
+    <Compile Include="AudioSettingsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\StarShooter.Audio\StarShooter.Audio.csproj">
+      <Project>{B72AF62D-19C8-45C9-9D53-304E8A208B13}</Project>
+      <Name>StarShooter.Audio</Name>
+    </ProjectReference>
     <ProjectReference Include="..\StarShooter.GameManagement\StarShooter.GameManagement.csproj">
       <Project>{3ab179c0-fb68-4f9e-bd3c-8856211e0284}</Project>
       <Name>StarShooter.GameManagement</Name>

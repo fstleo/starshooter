@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarShooter.Tests", "StarSh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarShooter.GameManagement", "StarShooter.GameManagement\StarShooter.GameManagement.csproj", "{3AB179C0-FB68-4F9E-BD3C-8856211E0284}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zenject", "Zenject\Zenject.csproj", "{6277AE70-9702-4270-88DD-CFE159E5B045}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarShooter.Audio", "StarShooter.Audio\StarShooter.Audio.csproj", "{B72AF62D-19C8-45C9-9D53-304E8A208B13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarShooter.UI", "StarShooter.UI\StarShooter.UI.csproj", "{B8A20DAD-02A5-4D96-AC3D-71C9CC1AEA8B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +33,18 @@ Global
 		{3AB179C0-FB68-4F9E-BD3C-8856211E0284}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3AB179C0-FB68-4F9E-BD3C-8856211E0284}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3AB179C0-FB68-4F9E-BD3C-8856211E0284}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6277AE70-9702-4270-88DD-CFE159E5B045}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6277AE70-9702-4270-88DD-CFE159E5B045}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6277AE70-9702-4270-88DD-CFE159E5B045}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6277AE70-9702-4270-88DD-CFE159E5B045}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B72AF62D-19C8-45C9-9D53-304E8A208B13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B72AF62D-19C8-45C9-9D53-304E8A208B13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B72AF62D-19C8-45C9-9D53-304E8A208B13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B72AF62D-19C8-45C9-9D53-304E8A208B13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8A20DAD-02A5-4D96-AC3D-71C9CC1AEA8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8A20DAD-02A5-4D96-AC3D-71C9CC1AEA8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8A20DAD-02A5-4D96-AC3D-71C9CC1AEA8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8A20DAD-02A5-4D96-AC3D-71C9CC1AEA8B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

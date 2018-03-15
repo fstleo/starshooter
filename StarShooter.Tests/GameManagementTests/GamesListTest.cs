@@ -2,7 +2,7 @@
 using Moq;
 using StarShooter.GameManagement.Data;
 using System.Threading.Tasks;
-using StarShooter.GameManagement.Selection;
+using StarShooter.GameManagement;
 
 namespace StarShooter.Tests.GameManagementTests
 {
