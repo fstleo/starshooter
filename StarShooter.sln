@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarShooter.Editor", "StarShooter.Editor\StarShooter.Editor.csproj", "{0CE520F6-EEB3-41C5-B92C-174768D984D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarShooter.Tests", "StarShooter.Tests\StarShooter.Tests.csproj", "{149AA39F-70E9-4CA2-8E75-FC351EB7ED62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarShooter.GameManagement", "StarShooter.GameManagement\StarShooter.GameManagement.csproj", "{3AB179C0-FB68-4F9E-BD3C-8856211E0284}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CE520F6-EEB3-41C5-B92C-174768D984D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CE520F6-EEB3-41C5-B92C-174768D984D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CE520F6-EEB3-41C5-B92C-174768D984D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CE520F6-EEB3-41C5-B92C-174768D984D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{149AA39F-70E9-4CA2-8E75-FC351EB7ED62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{149AA39F-70E9-4CA2-8E75-FC351EB7ED62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{149AA39F-70E9-4CA2-8E75-FC351EB7ED62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{149AA39F-70E9-4CA2-8E75-FC351EB7ED62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AB179C0-FB68-4F9E-BD3C-8856211E0284}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AB179C0-FB68-4F9E-BD3C-8856211E0284}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AB179C0-FB68-4F9E-BD3C-8856211E0284}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AB179C0-FB68-4F9E-BD3C-8856211E0284}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
