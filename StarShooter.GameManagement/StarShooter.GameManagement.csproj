@@ -22,9 +22,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
+    <DebugType>none</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\StarShooter.Unity\Assets\Plugins\</OutputPath>
+    <OutputPath>..\StarShooterProject\Assets\Plugins\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -40,15 +40,16 @@
     <Reference Include="System.Xml" />
     <Reference Include="UnityEditor">
       <HintPath>..\..\..\..\Program Files\Unity2017_3\Editor\Data\Managed\UnityEditor.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Program Files\Unity2017_3\Editor\Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\GameInfo.cs" />
-    <Compile Include="GamesListSource\SerializedObjectSource.cs" />
     <Compile Include="Interfaces\IGamesListSource.cs" />
     <Compile Include="Interfaces\IGameLoader.cs" />
     <Compile Include="Loader\GameLoader.cs" />
