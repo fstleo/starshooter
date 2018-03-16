@@ -74,7 +74,8 @@
   <ItemGroup>
     <Compile Include="GameManagementTests\GameLoaderTest.cs" />
     <Compile Include="GameManagementTests\GamesListTest.cs" />
-    <Compile Include="AudioSettingsTest.cs" />
+    <Compile Include="AudioTest\AudioSettingsTest.cs" />
+    <Compile Include="InputTests\InputManagerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -88,6 +89,10 @@
     <ProjectReference Include="..\StarShooter.GameManagement\StarShooter.GameManagement.csproj">
       <Project>{3ab179c0-fb68-4f9e-bd3c-8856211e0284}</Project>
       <Name>StarShooter.GameManagement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StarShooter.Input\StarShooter.Input.csproj">
+      <Project>{90424668-B2AD-4239-B13F-9B9D50FF793C}</Project>
+      <Name>StarShooter.Input</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

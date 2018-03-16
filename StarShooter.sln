@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarShooter.Editor", "StarShooter.Editor\StarShooter.Editor.csproj", "{0CE520F6-EEB3-41C5-B92C-174768D984D0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarShooter.Tests", "StarShooter.Tests\StarShooter.Tests.csproj", "{149AA39F-70E9-4CA2-8E75-FC351EB7ED62}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarShooter.GameManagement", "StarShooter.GameManagement\StarShooter.GameManagement.csproj", "{3AB179C0-FB68-4F9E-BD3C-8856211E0284}"
@@ -13,7 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zenject", "Zenject\Zenject.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarShooter.Audio", "StarShooter.Audio\StarShooter.Audio.csproj", "{B72AF62D-19C8-45C9-9D53-304E8A208B13}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarShooter.UI", "StarShooter.UI\StarShooter.UI.csproj", "{B8A20DAD-02A5-4D96-AC3D-71C9CC1AEA8B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarShooter.Unity", "StarShooter.Unity\StarShooter.Unity.csproj", "{04C6055E-4085-4084-8161-B79FE9022786}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarShooter.Input", "StarShooter.Input\StarShooter.Input.csproj", "{90424668-B2AD-4239-B13F-9B9D50FF793C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0CE520F6-EEB3-41C5-B92C-174768D984D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0CE520F6-EEB3-41C5-B92C-174768D984D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0CE520F6-EEB3-41C5-B92C-174768D984D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0CE520F6-EEB3-41C5-B92C-174768D984D0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{149AA39F-70E9-4CA2-8E75-FC351EB7ED62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{149AA39F-70E9-4CA2-8E75-FC351EB7ED62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{149AA39F-70E9-4CA2-8E75-FC351EB7ED62}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -41,10 +37,13 @@ Global
 		{B72AF62D-19C8-45C9-9D53-304E8A208B13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B72AF62D-19C8-45C9-9D53-304E8A208B13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B72AF62D-19C8-45C9-9D53-304E8A208B13}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B8A20DAD-02A5-4D96-AC3D-71C9CC1AEA8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B8A20DAD-02A5-4D96-AC3D-71C9CC1AEA8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B8A20DAD-02A5-4D96-AC3D-71C9CC1AEA8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B8A20DAD-02A5-4D96-AC3D-71C9CC1AEA8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04C6055E-4085-4084-8161-B79FE9022786}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04C6055E-4085-4084-8161-B79FE9022786}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04C6055E-4085-4084-8161-B79FE9022786}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90424668-B2AD-4239-B13F-9B9D50FF793C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90424668-B2AD-4239-B13F-9B9D50FF793C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90424668-B2AD-4239-B13F-9B9D50FF793C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90424668-B2AD-4239-B13F-9B9D50FF793C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
