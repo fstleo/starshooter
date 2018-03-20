@@ -6,10 +6,10 @@ using UnityEngine;
 
 namespace StarShooter.Input.InputManager
 {
-    public class InputManager : IInputManager
+    public sealed class InputManager : IInputManager
     {
-        protected Dictionary<int, Action<KeyState>> _listeners = new Dictionary<int, Action<KeyState>>();
-        protected Dictionary<KeyCode, KeyState> _keyStates = new Dictionary<KeyCode, KeyState>();
+        private readonly Dictionary<int, Action<KeyState>> _keyListeners = new Dictionary<int, Action<KeyState>>();       
+        private readonly Dictionary<KeyCode, KeyState> _keyStates = new Dictionary<KeyCode, KeyState>();
 
         private readonly IInputSettings _inputSettings;
         private readonly INativeInput _input;
@@ -19,6 +19,7 @@ namespace StarShooter.Input.InputManager
         {
             _inputSettings = settings;            
             _input = input;
+            _input.OnAnyKeyPress += CheckKeys;
             foreach (var key in _inputSettings.GetKeys())
             {
                 _keyStates.Add(key, KeyState.Released);
@@ -26,40 +27,40 @@ namespace StarShooter.Input.InputManager
             _keys = _inputSettings.GetKeys();
         }
 
-        public void CheckKeys()
+        private void CheckKeys()
         {            
             foreach (var key in _keys)
             {
                 var state = _input.GetKeyState(key);
                 if (state != _keyStates[key])
                 {
-                    _listeners[_inputSettings.GetControl(key)]?.Invoke(state);
+                    _keyListeners[_inputSettings.GetControl(key)]?.Invoke(state);
                 }
                 _keyStates[key] = state;
             }
         }
 
-        public void AddInputListener(int key, Action<KeyState> callback)
+        public void AddKeyListener(int key, Action<KeyState> callback)
         {
-            if (!_listeners.ContainsKey(key))
+            if (!_keyListeners.ContainsKey(key))
             {
-                _listeners.Add(key, callback);
+                _keyListeners.Add(key, callback);
             }
             else
             {
-                _listeners[key] += callback;
+                _keyListeners[key] += callback;
             }
         }
 
-        public void RemoveInputListener(int key, Action<KeyState> callback)
+        public void RemoveKeyListener(int key, Action<KeyState> callback)
         {
-            if (!_listeners.ContainsKey(key))
+            if (!_keyListeners.ContainsKey(key))
             {
                 return;
             }
             if (callback != null)
             {
-                _listeners[key] -= callback;
+                _keyListeners[key] -= callback;
             }
         }
 

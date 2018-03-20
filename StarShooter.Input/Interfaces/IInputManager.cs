@@ -5,8 +5,8 @@ namespace StarShooter.Input.Interfaces
 {
     public interface IInputManager
     {
-        void AddInputListener(int key, Action<KeyState> callback);
-        void RemoveInputListener(int key, Action<KeyState> callback);
+        void AddKeyListener(int key, Action<KeyState> callback);
+        void RemoveKeyListener(int key, Action<KeyState> callback);
     }
     
 }

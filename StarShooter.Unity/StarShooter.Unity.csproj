@@ -52,45 +52,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Audio\PlayerPrefsAudioSettingsController.cs" />
-    <Compile Include="Events\BackEvent.cs" />
-    <Compile Include="Events\EventBaseData.cs" />
-    <Compile Include="Events\EventManager.cs" />
-    <Compile Include="Events\Game\ComplexityUpEvent.cs" />
-    <Compile Include="Events\Game\EnemyDie.cs" />
-    <Compile Include="Events\Game\GameOverEvent.cs" />
-    <Compile Include="Events\Game\InputEvent.cs" />
-    <Compile Include="Events\Game\PlayerHit.cs" />
-    <Compile Include="Events\Game\PowerUps\LifePowerUpEvent.cs" />
-    <Compile Include="Events\Game\PowerUps\ScoresPowerUpEvent.cs" />
-    <Compile Include="Events\Game\PowerUps\WeaponPowerUpEvent.cs" />
-    <Compile Include="Events\Game\ShotEvent.cs" />
-    <Compile Include="Events\LivesCountChangeEvent.cs" />
-    <Compile Include="Events\ScoresChangeEvent.cs" />
     <Compile Include="GamesListSource\SerializedObjectSource.cs" />
-    <Compile Include="Game\Background.cs" />
-    <Compile Include="Game\BonusManager.cs" />
-    <Compile Include="Game\EnemyController.cs" />
-    <Compile Include="Game\EnemySpawn.cs" />
-    <Compile Include="Game\GameManager.cs" />
-    <Compile Include="Game\Player\GunController.cs" />
-    <Compile Include="Game\Player\GunsSet.cs" />
-    <Compile Include="Game\Player\PlayerCollision.cs" />
-    <Compile Include="Game\Player\PlayerController.cs" />
-    <Compile Include="Game\Player\PlayerDiePerformer.cs" />
-    <Compile Include="Game\Player\PlayerGun.cs" />
-    <Compile Include="Game\Player\PlayerMove.cs" />
-    <Compile Include="Game\Powerups\LifePowerUp.cs" />
-    <Compile Include="Game\Powerups\PowerUp.cs" />
-    <Compile Include="Game\Powerups\ScoresPowerUp.cs" />
-    <Compile Include="Game\Powerups\WeaponPowerUp.cs" />
-    <Compile Include="Game\ScoresManager.cs" />
-    <Compile Include="Game\SimpleMove.cs" />
-    <Compile Include="Game\SimpleRotation.cs" />
-    <Compile Include="Game\Util\AnimatedPoolItem.cs" />
-    <Compile Include="Game\Util\Pool.cs" />
-    <Compile Include="Game\Util\PoolItem.cs" />
+    <Compile Include="Game\Controls\AsteroidControl.cs" />
+    <Compile Include="Game\Collisions\CollisionsController.cs" />
+    <Compile Include="Game\GameActions.cs" />
+    <Compile Include="Game\Interfaces\IControl.cs" />
+    <Compile Include="Game\Interfaces\IDieEffects.cs" />
+    <Compile Include="Game\Interfaces\ILivesController.cs" />
+    <Compile Include="Game\Interfaces\IMove.cs" />
+    <Compile Include="Game\LifeManager\LifeManager.cs" />
+    <Compile Include="Game\Move\SimpleMove.cs" />
+    <Compile Include="Game\Controls\ShipControl.cs" />
     <Compile Include="Input\UnityInput.cs" />
-    <Compile Include="Input\UpdateInputManager.cs" />
     <Compile Include="UI\MainMenu\GameSelectMenu.cs" />
     <Compile Include="UI\Options\OptionsMenu.cs" />
     <Compile Include="UI\Options\VolumeSettingsPanel.cs" />
@@ -116,6 +89,7 @@
       <Name>Zenject</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
   <ProjectExtensions>
     <VisualStudio AllowExistingFolder="true" />

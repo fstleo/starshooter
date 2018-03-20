@@ -26,6 +26,7 @@ namespace StarShooter.Tests.InputTests
 
 
             nativeInputMock = new Mock<INativeInput>();
+            
             SetKeyState(TestKeyCode, KeyState.Down);
 
             manager = new InputManager(inputSettingsMock.Object, nativeInputMock.Object);
@@ -40,8 +41,8 @@ namespace StarShooter.Tests.InputTests
         public void InputManager_SetKeyState_Setted()
         {
             KeyState keyState = KeyState.Released;
-            manager.AddInputListener(TestKeyID, (state) => keyState = state);
-            manager.CheckKeys();
+            manager.AddKeyListener(TestKeyID, (state) => keyState = state);
+            nativeInputMock.Raise(input => input.OnAnyKeyPress += null);
 
             Assert.AreEqual(keyState, KeyState.Down);           
         }
@@ -50,13 +51,13 @@ namespace StarShooter.Tests.InputTests
         public void InputManager_StateChange_SettedProperly()
         {
             KeyState keyState = KeyState.Released;            
-            manager.AddInputListener(TestKeyID, (state) => keyState = state);
+            manager.AddKeyListener(TestKeyID, (state) => keyState = state);
 
             SetKeyState(TestKeyCode, KeyState.Down);
-            manager.CheckKeys();            
+            nativeInputMock.Raise(input => input.OnAnyKeyPress += null);
 
             SetKeyState(TestKeyCode, KeyState.Pressed);
-            manager.CheckKeys();
+            nativeInputMock.Raise(input => input.OnAnyKeyPress += null);
             Assert.AreEqual(keyState, KeyState.Pressed);
         }
 
@@ -64,13 +65,13 @@ namespace StarShooter.Tests.InputTests
         public void InputManager_StateChange_CalledOnce()
         {
             int callCount = 0;
-            manager.AddInputListener(TestKeyID, (state) => callCount++);
+            manager.AddKeyListener(TestKeyID, (state) => callCount++);
 
             SetKeyState(TestKeyCode, KeyState.Down);
-            manager.CheckKeys();
+            nativeInputMock.Raise(input => input.OnAnyKeyPress += null);
 
             SetKeyState(TestKeyCode, KeyState.Down);
-            manager.CheckKeys();
+            nativeInputMock.Raise(input => input.OnAnyKeyPress += null);
             Assert.AreEqual(callCount, TestKeyID);
         }
     }

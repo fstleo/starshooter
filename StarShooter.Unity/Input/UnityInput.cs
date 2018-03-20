@@ -1,11 +1,15 @@
-﻿using StarShooter.Input.Enums;
+﻿using System;
+using StarShooter.Input.Enums;
 using StarShooter.Input.Interfaces;
 using UnityEngine;
+using Zenject;
 
 namespace StarShooter.Unity.Input
 {
-    public class UnityInput : INativeInput
+    public class UnityInput : INativeInput, ITickable
     {
+        public event Action OnAnyKeyPress;
+
         public KeyState GetKeyState(KeyCode code)
         {
             if (UnityEngine.Input.GetKeyDown(code))
@@ -21,6 +25,14 @@ namespace StarShooter.Unity.Input
                 return KeyState.Up;
             }
             return KeyState.Released;
+        }
+
+        public void Tick()
+        {
+            if (UnityEngine.Input.anyKey)
+            {
+                OnAnyKeyPress?.Invoke();
+            }
         }
     }
 }
