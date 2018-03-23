@@ -1,7 +1,10 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using StarShooter.GameManagement;
 using StarShooter.GameManagement.Data;
+using StarShooter.Unity;
+using StarShooter.Unity.UI;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -17,6 +20,9 @@ namespace StarShooter.UI
 
         [Inject]
         private IGameLoader _gameLoader;
+
+        [Inject]
+        private IAppStateManager _appStateManager;
 
         private GameInfo[] _gamesList;
 

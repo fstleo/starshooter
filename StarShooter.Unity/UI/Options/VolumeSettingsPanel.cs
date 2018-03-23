@@ -16,9 +16,15 @@ namespace StarShooter.UI.Options
         private Toggle muteToggle;
 
         private void Awake()
-        {            
-            volumeSlider.onValueChanged.AddListener(SetValue);
-            muteToggle.onValueChanged.AddListener(MuteEvent);     
+        {
+            if (volumeSlider != null)
+            {
+                volumeSlider.onValueChanged.AddListener(SetValue);
+            }
+            if (muteToggle != null)
+            {
+                muteToggle.onValueChanged.AddListener(MuteEvent);
+            }
         }
 
         private void MuteEvent(bool value)

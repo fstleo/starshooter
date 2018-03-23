@@ -51,7 +51,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppStateControl\AppStates.cs" />
+    <Compile Include="AppStateControl\AppStatesController.cs" />
     <Compile Include="Audio\PlayerPrefsAudioSettingsController.cs" />
+    <Compile Include="Controllers\MainMenu\IMainMenuController.cs" />
+    <Compile Include="Controllers\MainMenu\MainMenuController.cs" />
+    <Compile Include="Controllers\OptionsMenu\IOptionsMenuController.cs" />
+    <Compile Include="Controllers\OptionsMenu\OptionsMenuController.cs" />
     <Compile Include="GamesListSource\SerializedObjectSource.cs" />
     <Compile Include="Game\Controls\AsteroidControl.cs" />
     <Compile Include="Game\Collisions\CollisionsController.cs" />
@@ -63,10 +69,17 @@
     <Compile Include="Game\LifeManager\LifeManager.cs" />
     <Compile Include="Game\Move\SimpleMove.cs" />
     <Compile Include="Game\Controls\ShipControl.cs" />
+    <Compile Include="Input\InputSettings.cs" />
     <Compile Include="Input\UnityInput.cs" />
+    <Compile Include="Installers\InputInstaller.cs" />
+    <Compile Include="AppStateControl\IAppStateManager.cs" />
+    <Compile Include="Installers\MenuControllersInstaller.cs" />
     <Compile Include="UI\MainMenu\GameSelectMenu.cs" />
+    <Compile Include="UI\MainMenu\SingleGameMenu.cs" />
+    <Compile Include="UI\MenuState.cs" />
     <Compile Include="UI\Options\OptionsMenu.cs" />
     <Compile Include="UI\Options\VolumeSettingsPanel.cs" />
+    <Compile Include="Utils\SerializableDictionary.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StarShooter.Audio\StarShooter.Audio.csproj">

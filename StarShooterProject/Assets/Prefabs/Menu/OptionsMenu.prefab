@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 224905971602863152}
   - component: {fileID: 222812882834723866}
   - component: {fileID: 114109059862551136}
+  - component: {fileID: 114341335292166818}
   m_Layer: 5
   m_Name: SoundSlider
   m_TagString: Untagged
@@ -170,6 +171,7 @@ GameObject:
   - component: {fileID: 224639649166149486}
   - component: {fileID: 222000927331539458}
   - component: {fileID: 114454880507551230}
+  - component: {fileID: 114960731513875790}
   m_Layer: 5
   m_Name: MusicSlider
   m_TagString: Untagged
@@ -571,12 +573,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1939436701978234}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea69ab57dccd8324a8f45641077f7bec, type: 3}
+  m_Script: {fileID: -1590473966, guid: 63f22665d7c67254c8fe8c2a6ef2c0e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateType: 1
-  musicSlider: {fileID: 114507993331389316}
-  soundSlider: {fileID: 114035330374304394}
+  audioPanel: {fileID: 114341335292166818}
+  musicPanel: {fileID: 114960731513875790}
+--- !u!114 &114341335292166818
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1342486339932940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -233723354, guid: 63f22665d7c67254c8fe8c2a6ef2c0e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 114035330374304394}
+  muteToggle: {fileID: 0}
 --- !u!114 &114341914750315194
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -895,6 +909,19 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: sound
+--- !u!114 &114960731513875790
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1526932089809594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -233723354, guid: 63f22665d7c67254c8fe8c2a6ef2c0e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 114507993331389316}
+  muteToggle: {fileID: 0}
 --- !u!222 &222000927331539458
 CanvasRenderer:
   m_ObjectHideFlags: 1

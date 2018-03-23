@@ -1,4 +1,5 @@
 ﻿using StarShooter.Audio.Interfaces;
+using StarShooter.Unity.Controllers.OptionsMenu;
 using UnityEngine;
 using Zenject;
 
@@ -9,23 +10,29 @@ namespace StarShooter.UI.Options
 
         [SerializeField] private VolumeSettingsPanel audioPanel;
         [SerializeField] private VolumeSettingsPanel musicPanel;
-        
-        private IAudioSettingsController _audioSettingsController;
+
+        private IOptionsMenuController _optionsMenuController;
 
         [Inject]
-        private void Init(IAudioSettingsController audioSettingsController)
+        private void Init(IOptionsMenuController optionsMenuController)
         {
-            _audioSettingsController = audioSettingsController;
+            _optionsMenuController = optionsMenuController;
 
-            audioPanel.SetValue(_audioSettingsController.AudioVolume);
-            audioPanel.SetValue(_audioSettingsController.MusicVolume);
+            audioPanel.SetValue(_optionsMenuController.AudioVolume);
+            audioPanel.SetValue(_optionsMenuController.MusicVolume);
 
-            audioPanel.OnValueChange += (value) => audioSettingsController.AudioVolume = value;
-            audioPanel.OnMute += muted => audioSettingsController.AudioMuted = muted;
+            audioPanel.OnValueChange += (value) => _optionsMenuController.AudioVolume = value;
+            audioPanel.OnMute += muted => _optionsMenuController.SetAudioMute(muted);
 
-            musicPanel.OnValueChange += (value) => audioSettingsController.MusicVolume = value;            
-            musicPanel.OnMute += muted => audioSettingsController.MusicMuted = muted;        
+            musicPanel.OnValueChange += (value) => _optionsMenuController.MusicVolume = value;
+            musicPanel.OnMute += muted => _optionsMenuController.SetMusicMute(muted);
         }
+
+        public void OnBackButtonClick()
+        {
+            
+        }
+
     }
 
     

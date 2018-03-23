@@ -1,6 +1,7 @@
 ﻿using System;
 using StarShooter.Input.Enums;
 using StarShooter.Input.Interfaces;
+using StarShooter.Unity.Game.Interfaces;
 using UnityEngine;
 
 namespace StarShooter.Unity.Game.Controls
