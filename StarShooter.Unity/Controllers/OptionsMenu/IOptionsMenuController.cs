@@ -7,6 +7,5 @@
 
         void SetAudioMute(bool muted);        
         void SetMusicMute(bool muted);
-        void GoToMenu();
     }
 }

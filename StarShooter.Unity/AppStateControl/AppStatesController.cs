@@ -11,7 +11,7 @@ namespace StarShooter.Unity.AppStateControl
     {
         public event Action<AppState> OnStateChange;
 
-        private AppState _currentState;
+        private AppState _currentState = AppState.MainMenu;
         public AppState CurrentState
         {
             get { return _currentState; }

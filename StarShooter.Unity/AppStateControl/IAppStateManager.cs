@@ -2,7 +2,7 @@
 
 namespace StarShooter.Unity.UI
 {
-    internal interface IAppStateManager
+    public interface IAppStateManager
     {
 
         event Action<AppState> OnStateChange;

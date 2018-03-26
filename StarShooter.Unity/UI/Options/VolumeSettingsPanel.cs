@@ -35,7 +35,10 @@ namespace StarShooter.UI.Options
         public void SetValue(float value)
         {
             OnValueChange?.Invoke(value);
-            muteToggle.isOn = value < 0.01f;
+            if(muteToggle != null)
+            { 
+                muteToggle.isOn = value < 0.01f;
+            }
         }
 
     }

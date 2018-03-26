@@ -56,6 +56,7 @@
     <Compile Include="Audio\PlayerPrefsAudioSettingsController.cs" />
     <Compile Include="Controllers\MainMenu\IMainMenuController.cs" />
     <Compile Include="Controllers\MainMenu\MainMenuController.cs" />
+    <Compile Include="Controllers\MenuStateController.cs" />
     <Compile Include="Controllers\OptionsMenu\IOptionsMenuController.cs" />
     <Compile Include="Controllers\OptionsMenu\OptionsMenuController.cs" />
     <Compile Include="GamesListSource\SerializedObjectSource.cs" />
@@ -71,12 +72,14 @@
     <Compile Include="Game\Controls\ShipControl.cs" />
     <Compile Include="Input\InputSettings.cs" />
     <Compile Include="Input\UnityInput.cs" />
+    <Compile Include="Installers\AudioSettingsInstaller.cs" />
     <Compile Include="Installers\InputInstaller.cs" />
     <Compile Include="AppStateControl\IAppStateManager.cs" />
     <Compile Include="Installers\MenuControllersInstaller.cs" />
     <Compile Include="UI\MainMenu\GameSelectMenu.cs" />
     <Compile Include="UI\MainMenu\SingleGameMenu.cs" />
-    <Compile Include="UI\MenuState.cs" />
+    <Compile Include="UI\States\MenuChangeStateButton.cs" />
+    <Compile Include="UI\States\MenuState.cs" />
     <Compile Include="UI\Options\OptionsMenu.cs" />
     <Compile Include="UI\Options\VolumeSettingsPanel.cs" />
     <Compile Include="Utils\SerializableDictionary.cs" />

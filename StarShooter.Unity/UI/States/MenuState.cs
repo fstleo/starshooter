@@ -6,17 +6,20 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Zenject;
 
-namespace StarShooter.Unity.UI
+namespace StarShooter.Unity.UI.States
 {
     public class MenuState : MonoBehaviour
     {
         [SerializeField]
         private AppState State;
 
+        private IAppStateManager _appStateManager;
         [Inject]
         private void Init(IAppStateManager appStateManager)
         {
-            appStateManager.OnStateChange += CheckActivity;
+            _appStateManager = appStateManager;
+            _appStateManager.OnStateChange += CheckActivity;
+            CheckActivity(_appStateManager.CurrentState);
         }
 
         private void CheckActivity(AppState obj)
