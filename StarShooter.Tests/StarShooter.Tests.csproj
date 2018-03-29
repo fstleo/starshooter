@@ -54,7 +54,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>..\..\..\..\Program Files\Unity2017_3\Editor\Data\Managed\UnityEngine.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Editor\Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Choose>
@@ -72,6 +72,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="GameManagementTests\AppStatesTest.cs" />
     <Compile Include="GameManagementTests\GameLoaderTest.cs" />
     <Compile Include="GameManagementTests\GamesListTest.cs" />
     <Compile Include="AudioTest\AudioSettingsTest.cs" />
