@@ -1,11 +1,12 @@
 ﻿using System;
 using StarShooter.Unity.Game.Interfaces;
 
-namespace StarShooter.Unity.Game.LifeManager
+namespace StarShooter.Unity.Game.LifeManagement
 {
     public class LifeManager : ILivesController
     {
         public event Action OnDie;
+        public event Action<int> OnLivesCountChange;
 
         private int _lives;
 
@@ -21,6 +22,7 @@ namespace StarShooter.Unity.Game.LifeManager
                 else
                 {
                     _lives = value;
+                    OnLivesCountChange?.Invoke(value);
                 }                
             }
         }

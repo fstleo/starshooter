@@ -338,12 +338,16 @@
     <Compile Include="Assets\Scripts\Game\Controls\Moving\AsteroidControl.cs" />
     <Compile Include="Assets\Scripts\Game\Controls\Moving\ShipControl.cs" />
     <Compile Include="Assets\Scripts\Game\EnemySpawner.cs" />
+    <Compile Include="Assets\Scripts\Game\Installers\LifeManagementInstaller.cs" />
+    <Compile Include="Assets\Scripts\Game\Installers\ScoresManagementInstaller.cs" />
     <Compile Include="Assets\Scripts\Game\Interfaces\IControl.cs" />
     <Compile Include="Assets\Scripts\Game\Interfaces\IDieEffects.cs" />
     <Compile Include="Assets\Scripts\Game\Interfaces\ILivesController.cs" />
     <Compile Include="Assets\Scripts\Game\Interfaces\IMove.cs" />
+    <Compile Include="Assets\Scripts\Game\Interfaces\IScoresManager.cs" />
     <Compile Include="Assets\Scripts\Game\LifeManager\LifeManager.cs" />
     <Compile Include="Assets\Scripts\Game\Move\SimpleMove.cs" />
+    <Compile Include="Assets\Scripts\Game\ScoresManager\PlayerPrefsScoresManager.cs" />
     <Compile Include="Assets\Scripts\GamesListSource\SerializedObjectSource.cs" />
     <Compile Include="Assets\Scripts\Input\InputSettings.cs" />
     <Compile Include="Assets\Scripts\Input\UnityInput.cs" />
@@ -354,6 +358,7 @@
     <Compile Include="Assets\Scripts\SceneManagement\IScenesStatesSettings.cs" />
     <Compile Include="Assets\Scripts\SceneManagement\ScenesSettings.cs" />
     <Compile Include="Assets\Scripts\SceneManagement\UnityStateManager.cs" />
+    <Compile Include="Assets\Scripts\UI\Game\GameMenu.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenu\GameSelectMenu.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenu\SingleGameMenu.cs" />
     <Compile Include="Assets\Scripts\UI\Options\OptionsMenu.cs" />
