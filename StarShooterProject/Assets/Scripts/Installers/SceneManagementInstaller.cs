@@ -6,7 +6,8 @@ namespace StarShooter.GameManagement.SceneManagement.Installer
     {
         public override void InstallBindings()
         {
-            Container.Bind<ISceneManager>().To<UnitySceneManager>().AsSingle();
+            Container.Bind<IAppStateManager>().To<UnityStateManager>().AsSingle();
+            Container.Bind<IScenesStatesSettings>().To<ScenesSettings>().FromScriptableObjectResource("Settings/ScenesSettings").AsSingle();
         }
     }
 }

@@ -335,7 +335,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Editor\Input\InputSDDrawer.cs" />
+    <Compile Include="Assets\Editor\DictionariesDrawers\AppStatesSettingsDrawer.cs" />
+    <Compile Include="Assets\Editor\DictionariesDrawers\InputSDDrawer.cs" />
+    <Compile Include="Assets\Editor\DictionariesDrawers\StateTransitionsDictoinaryDrawer.cs" />
     <Compile Include="Assets\Editor\SerializableDictionaryDrawer.cs" />
   </ItemGroup>
   <ItemGroup>

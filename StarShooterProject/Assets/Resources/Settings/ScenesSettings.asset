@@ -8,10 +8,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aee2069216508f144acdf360fb9cfc9b, type: 3}
-  m_Name: InputSettings
+  m_Script: {fileID: 11500000, guid: e2f2d17756ce78f40b2ec3b01c06f340, type: 3}
+  m_Name: ScenesSettings
   m_EditorClassIdentifier: 
-  _keysDictionary:
+  scenesList:
     _Buckets: ffffffffffffffffffffffff
     _HashCodes: 000000000000000000000000
     _Next: 000000000000000000000000
@@ -20,4 +20,7 @@ MonoBehaviour:
     _FreeList: -1
     _FreeCount: 0
     _Keys: 000000000000000000000000
-    _Values: 000000000000000000000000
+    _Values:
+    - 
+    - 
+    - 

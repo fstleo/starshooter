@@ -114,6 +114,54 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &114514151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 114514153}
+  - component: {fileID: 114514152}
+  m_Layer: 0
+  m_Name: SceneContext
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &114514152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 114514151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89715ad69b973a14899afa2c6730b30b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _installers: []
+  _installerPrefabs: []
+  _scriptableObjectInstallers: []
+  _autoRun: 1
+  _parentNewObjectsUnderRoot: 0
+  _contractNames: []
+  _parentContractName: 
+  _parentContractNames: []
+--- !u!4 &114514153
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 114514151}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &182491613 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224573151850448876, guid: 8595a96be5581484b851c61198a3c85a,
@@ -592,6 +640,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 64415970084929136, guid: 8863dda6c99da5b4bbba3259ca87267d, type: 2}
+    - {fileID: 114144621214149892, guid: 8863dda6c99da5b4bbba3259ca87267d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 8863dda6c99da5b4bbba3259ca87267d, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &852036487
@@ -876,7 +925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6df058e78bba4543b0ab8b65be95ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  State: 6
+  State: 7
 --- !u!1 &1313004069
 GameObject:
   m_ObjectHideFlags: 0
@@ -1650,4 +1699,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2057527389
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2057527391}
+  - component: {fileID: 2057527390}
+  m_Layer: 0
+  m_Name: TransitionsObserver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2057527390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2057527389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b598fe5da6575c40b4dd2b483954538, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateTransitions:
+    _Buckets: ffffffffffffffffffffffff02000000000000000100000003000000
+    _HashCodes: 04000000050000000300000006000000000000000000000000000000
+    _Next: ffffffffffffffffffffffffffffffff000000000000000000000000
+    _Count: 4
+    _Version: 21
+    _FreeList: -1
+    _FreeCount: 0
+    _Keys: 04000000050000000300000006000000000000000000000000000000
+    _Values: 05000000040000000500000004000000000000000000000000000000
+--- !u!4 &2057527391
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2057527389}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 131.10379, y: 316.38818, z: 5.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

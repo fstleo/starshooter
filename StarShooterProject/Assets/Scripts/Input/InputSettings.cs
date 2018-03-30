@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Linq;
-using System.Threading.Tasks;
-using StarShooter.GameManagement.Data;
 using StarShooter.Input.Interfaces;
-using StarShooter.Unity.Game;
+using StarShooter.Unity.Game.Controls;
 using StarShooter.Unity.Utils;
 using UnityEngine;
 

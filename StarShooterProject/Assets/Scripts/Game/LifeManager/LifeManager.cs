@@ -7,7 +7,7 @@ namespace StarShooter.Unity.Game.LifeManager
     {
         public event Action OnDie;
 
-        public int _lives;
+        private int _lives;
 
         public int Lives
         {

@@ -133,7 +133,7 @@ public abstract class DictionaryDrawer<TK, TV> : PropertyDrawer
             { typeof(Rect), (rect, value) => EditorGUI.RectField(rect, (Rect)value) },
         };
 
-    private static T DoField<T>(Rect rect, Type type, T value)
+    protected virtual T DoField<T>(Rect rect, Type type, T value)
     {
         Func<Rect, object, object> field;
         if (_Fields.TryGetValue(type, out field))
@@ -158,12 +158,28 @@ public abstract class DictionaryDrawer<TK, TV> : PropertyDrawer
     {
         TK key;
         if (typeof(TK) == typeof(string))
-            key = (TK)(object)"";
-        else key = default(TK);
+        {
+            key = (TK) (object) "";            
+        }
+        else if (typeof(TK).IsEnum)
+        {
+            key = default(TK);
+            foreach (var t in Enum.GetValues(typeof(TK)))
+            {
+                if (!_Dictionary.ContainsKey((TK)t))
+                {
+                    key = (TK)t;
+                }
+            }
+        }
+        else
+        {
+            key = default(TK);
+        }
 
         var value = default(TV);
         try
-        {
+        {            
             _Dictionary.Add(key, value);
         }
         catch (Exception e)

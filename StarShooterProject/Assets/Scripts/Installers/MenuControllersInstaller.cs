@@ -11,8 +11,7 @@ namespace StarShooter.Unity.Installers
         public override void InstallBindings()
         {
             Container.Bind<IMainMenuController>().To<MainMenuController>().AsSingle();
-            Container.Bind<IOptionsMenuController>().To<OptionsMenuController>().AsSingle();
-            Container.Bind<IAppStateManager>().To<AppStatesController>().AsSingle();
+            Container.Bind<IOptionsMenuController>().To<OptionsMenuController>().AsSingle();     
         }
     }
 }

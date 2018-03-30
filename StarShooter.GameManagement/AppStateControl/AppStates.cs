@@ -6,8 +6,9 @@
         Loading,
         MainMenu,
         Options,
-        Game,
-        GamePause,
+        Game,      
+        GameMenu,
+        GameOptions,
         GameOver
     }
 }

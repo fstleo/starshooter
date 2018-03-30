@@ -23,7 +23,7 @@ namespace StarShooter.Unity.Controllers
 
         public void SetGamePause()
         {
-            SetState(AppState.GamePause);
+            SetState(AppState.GameMenu);
         }
 
         public void SetGameOverState()

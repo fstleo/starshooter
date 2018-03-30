@@ -1,4 +1,4 @@
-﻿namespace StarShooter.Unity.Game
+﻿namespace StarShooter.Unity.Game.Controls
 {
     public enum GameActions
     {
@@ -7,6 +7,6 @@
         Down,
         Up,
         Shot,
-        Pause
+        Escape
     }
 }

@@ -6,9 +6,8 @@ public class Preloader : MonoBehaviour
 {
 
     [Inject]
-    void Init(IAppStateManager stateManager, ISceneManager sceneManager)
+    void Init(IAppStateManager stateManager)
     {
         stateManager.CurrentState = AppState.MainMenu;
-        sceneManager.LoadScene("1. MainMenu");
     }
 }
