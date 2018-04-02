@@ -5,27 +5,28 @@ using StarShooter.Unity.Game.Controls;
 using StarShooter.Unity.Utils;
 using UnityEngine;
 
-namespace StarShooter.GameManagement.GamesListSource
+namespace StarShooter.Input
 {
 
     [Serializable]
     public class InputKeysDictionary : SerializableDictionary<KeyCode, GameActions> { }
-    [CreateAssetMenu(fileName = "InputSettings", menuName = "Games/Create input settings")]
+    [CreateAssetMenu(fileName = "InputSettings", menuName = "Games/Create input settings"), Serializable]
     public  class InputSettings : ScriptableObject, IInputSettings
     {
         [SerializeField]
         private InputKeysDictionary _keysDictionary = new InputKeysDictionary();
 
-        public KeyCode[] GetKeys()
+        public int[] GetKeys()
         {
-            return _keysDictionary.Keys.ToArray();
+            return Array.ConvertAll(_keysDictionary.Keys.ToArray(), value => (int)value);
         }
 
-        public int GetControl(KeyCode code)
+        public int GetControl(int code)
         {
-            if (_keysDictionary.ContainsKey(code))
+            KeyCode unityCode = (KeyCode)code;
+            if (_keysDictionary.ContainsKey(unityCode))
             {
-                return (int) _keysDictionary[code];
+                return (int) _keysDictionary[unityCode];
             }
             return -1;
         }

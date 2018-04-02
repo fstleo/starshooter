@@ -4,7 +4,6 @@ using StarShooter.Input.InputManager;
 using StarShooter.Input.Interfaces;
 using Moq;
 using StarShooter.Input.Enums;
-using UnityEngine;
 
 namespace StarShooter.Tests.InputTests
 {    
@@ -13,7 +12,7 @@ namespace StarShooter.Tests.InputTests
     public class InputManagerTests
     {
         private const int TestKeyID = 1;
-        private const KeyCode TestKeyCode = KeyCode.A;
+        private const int TestKeyCode = 5;
         private InputManager manager;
         private Mock<INativeInput> nativeInputMock;
 
@@ -32,7 +31,7 @@ namespace StarShooter.Tests.InputTests
             manager = new InputManager(inputSettingsMock.Object, nativeInputMock.Object);
         }
 
-        private void SetKeyState(KeyCode code, KeyState state)
+        private void SetKeyState(int code, KeyState state)
         {
             nativeInputMock.Setup(s => s.GetKeyState(code)).Returns(state);
         }
@@ -42,9 +41,8 @@ namespace StarShooter.Tests.InputTests
         {
             KeyState keyState = KeyState.Released;
             manager.AddKeyListener(TestKeyID, (state) => keyState = state);
-            nativeInputMock.Raise(input => input.OnAnyKeyPress += null);
-
-            Assert.AreEqual(keyState, KeyState.Down);           
+            nativeInputMock.Raise(input => input.OnTick += null);            
+            Assert.AreEqual(KeyState.Down, keyState);           
         }
 
         [TestMethod]
@@ -54,10 +52,10 @@ namespace StarShooter.Tests.InputTests
             manager.AddKeyListener(TestKeyID, (state) => keyState = state);
 
             SetKeyState(TestKeyCode, KeyState.Down);
-            nativeInputMock.Raise(input => input.OnAnyKeyPress += null);
+            nativeInputMock.Raise(input => input.OnTick += null);
 
             SetKeyState(TestKeyCode, KeyState.Pressed);
-            nativeInputMock.Raise(input => input.OnAnyKeyPress += null);
+            nativeInputMock.Raise(input => input.OnTick += null);
             Assert.AreEqual(keyState, KeyState.Pressed);
         }
 
@@ -68,10 +66,10 @@ namespace StarShooter.Tests.InputTests
             manager.AddKeyListener(TestKeyID, (state) => callCount++);
 
             SetKeyState(TestKeyCode, KeyState.Down);
-            nativeInputMock.Raise(input => input.OnAnyKeyPress += null);
+            nativeInputMock.Raise(input => input.OnTick += null);
 
             SetKeyState(TestKeyCode, KeyState.Down);
-            nativeInputMock.Raise(input => input.OnAnyKeyPress += null);
+            nativeInputMock.Raise(input => input.OnTick += null);
             Assert.AreEqual(callCount, TestKeyID);
         }
     }

@@ -1,7 +1,7 @@
-﻿using StarShooter.GameManagement.GamesListSource;
+﻿using StarShooter.Input;
 using StarShooter.Input.InputManager;
 using StarShooter.Input.Interfaces;
-using StarShooter.Unity.Input;
+using StarShooter.Unity.InputSystem;
 using Zenject;
 
 namespace StarShooter.Unity.Installers

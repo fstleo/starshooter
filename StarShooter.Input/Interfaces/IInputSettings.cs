@@ -1,11 +1,9 @@
-﻿using UnityEngine;
-
-namespace StarShooter.Input.Interfaces
+﻿namespace StarShooter.Input.Interfaces
 {
     public interface IInputSettings
     {
-        KeyCode[] GetKeys();
+        int[] GetKeys();
 
-        int GetControl(KeyCode code);
+        int GetControl(int code);
     }
 }

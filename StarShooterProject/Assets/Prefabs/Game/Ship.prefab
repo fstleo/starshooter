@@ -36,12 +36,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4486507219787996}
-  - component: {fileID: 114436993197781284}
-  - component: {fileID: 114492324150533668}
   - component: {fileID: 61434067374278002}
   - component: {fileID: 50689126804875168}
-  - component: {fileID: 114325750864192902}
-  - component: {fileID: 114188226783965762}
   m_Layer: 8
   m_Name: Ship
   m_TagString: Player
@@ -88,7 +84,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4151581120439630}
-  - component: {fileID: 114250579478386206}
   m_Layer: 8
   m_Name: GunSet0
   m_TagString: Untagged
@@ -137,7 +132,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4007928444042832}
-  - component: {fileID: 114894693106372486}
   m_Layer: 8
   m_Name: GunSet1
   m_TagString: Untagged
@@ -221,7 +215,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4454306567233574}
-  - component: {fileID: 114261249693983220}
   m_Layer: 8
   m_Name: GunSet2
   m_TagString: Untagged
@@ -546,17 +539,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.5}
   m_EdgeRadius: 0
---- !u!114 &114188226783965762
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1054739788489992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dc3981ab54dfc64e962468082fbb50f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114200473022745464
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -581,39 +563,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ReloadTime: 0.2
---- !u!114 &114250579478386206
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1316959922902760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 729e8c7027f1b284193775930faaa6ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114261249693983220
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1746717529639808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 729e8c7027f1b284193775930faaa6ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114325750864192902
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1054739788489992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a6a7c7d6da99204a99654074ce30a2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114379345307231544
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -626,31 +575,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ReloadTime: 0.2
---- !u!114 &114436993197781284
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1054739788489992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b50c53f1617d98d4cafc234d50ab3974, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  XSpeed: 5
-  YSpeed: 5
---- !u!114 &114492324150533668
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1054739788489992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ab1719badfe3dd4e836b946323411b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  level: 0
 --- !u!114 &114622029961273638
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -675,17 +599,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ReloadTime: 0.2
---- !u!114 &114894693106372486
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1507772393655478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 729e8c7027f1b284193775930faaa6ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114983608215275798
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1219,7 +1132,7 @@ ParticleSystem:
     m_UseMeshMaterialIndex: 0
     m_UseMeshColors: 1
     alignToDirection: 0
-    randomDirectionAmount: 0.01
+    randomDirectionAmount: 0
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:

@@ -12,15 +12,29 @@ MonoBehaviour:
   m_Name: ScenesSettings
   m_EditorClassIdentifier: 
   scenesList:
-    _Buckets: ffffffffffffffffffffffff
-    _HashCodes: 000000000000000000000000
-    _Next: 000000000000000000000000
-    _Count: 0
-    _Version: 0
+    _Buckets: 0700000006000000050000000400000003000000020000000100000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    _HashCodes: 0700000006000000050000000400000003000000020000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    _Next: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff000000000000000000000000000000000000000000000000000000000000000000000000
+    _Count: 8
+    _Version: 14
     _FreeList: -1
     _FreeCount: 0
-    _Keys: 000000000000000000000000
+    _Keys: 0700000006000000050000000400000003000000020000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     _Values:
+    - 2. Game
+    - 2. Game
+    - 2. Game
+    - 2. Game
+    - 1. MainMenu
+    - 1. MainMenu
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
     - 
     - 
     - 

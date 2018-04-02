@@ -20,7 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 224509741473573982}
   - component: {fileID: 222981896849082280}
-  - component: {fileID: 114785013021102820}
+  - component: {fileID: 114989173784075660}
+  - component: {fileID: 114671726089023506}
   m_Layer: 5
   m_Name: GameMenu
   m_TagString: Untagged
@@ -155,7 +156,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114785013021102820
+--- !u!114 &114671726089023506
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -163,12 +164,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1041854760669076}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7c8c4e012b2b6c4a8766b3085b7f566, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d8c4751536e2ab4597231e0568934fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateType: 3
-  scoresLabel: {fileID: 114940325045554700}
-  livesCountLabel: {fileID: 114069187219775694}
+  LivesCountLabel: {fileID: 114069187219775694}
+  ScoresLabel: {fileID: 114940325045554700}
 --- !u!114 &114940325045554700
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -202,6 +202,18 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 3
+--- !u!114 &114989173784075660
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1041854760669076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6df058e78bba4543b0ab8b65be95ff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  State: 4
 --- !u!222 &222539204593737514
 CanvasRenderer:
   m_ObjectHideFlags: 1

@@ -10,7 +10,7 @@ namespace StarShooter.Unity.UI.States
         [SerializeField]
         private AppState State;
 
-        private IAppStateManager _stateManager;
+        protected IAppStateManager _stateManager;
 
         [Inject]
         private void Init(IAppStateManager stateManager)
@@ -19,7 +19,7 @@ namespace StarShooter.Unity.UI.States
             GetComponent<Button>().onClick.AddListener(CallChangeState);
         }
 
-        private void CallChangeState()
+        protected virtual void CallChangeState()
         {
             _stateManager.CurrentState = State;
         }

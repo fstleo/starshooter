@@ -8,7 +8,7 @@ namespace StarShooter.GameManagement.SceneManagement
 {
     [Serializable]
     public class StatesScenesDictionary : SerializableDictionary<AppState, string> { }
-    [CreateAssetMenu(fileName = "ScenesSettings", menuName = "Games/Create scenes list")]
+    [CreateAssetMenu(fileName = "ScenesSettings", menuName = "Games/Create scenes list"), Serializable]
     public class ScenesSettings : ScriptableObject, IScenesStatesSettings
     {
         [SerializeField]

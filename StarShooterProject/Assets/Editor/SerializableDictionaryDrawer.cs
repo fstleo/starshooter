@@ -84,7 +84,7 @@ public abstract class DictionaryDrawer<TK, TV> : PropertyDrawer
             value = DoField(valueRect, typeof(TV), value);
             if (EditorGUI.EndChangeCheck())
             {
-                _Dictionary[key] = value;
+                _Dictionary[key] = value;               
                 break;
             }
 

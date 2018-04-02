@@ -2595,10 +2595,10 @@ namespace Zenject
 
         public void BindExecutionOrder(Type type, int order)
         {
-            Assert.That(type.DerivesFrom<ITickable>() || type.DerivesFrom<IInitializable>() || type.DerivesFrom<IDisposable>() || type.DerivesFrom<ILateDisposable>() || type.DerivesFrom<IFixedTickable>() || type.DerivesFrom<ILateTickable>(),
+            Assert.That(type.DerivesFrom<IFixedTickable>() || type.DerivesFrom<IInitializable>() || type.DerivesFrom<IDisposable>() || type.DerivesFrom<ILateDisposable>() || type.DerivesFrom<IFixedTickable>() || type.DerivesFrom<ILateTickable>(),
                 "Expected type '{0}' to derive from one or more of the following interfaces: ITickable, IInitializable, ILateTickable, IFixedTickable, IDisposable, ILateDisposable", type);
 
-            if (type.DerivesFrom<ITickable>())
+            if (type.DerivesFrom<IFixedTickable>())
             {
                 BindTickableExecutionOrder(type, order);
             }
@@ -2630,14 +2630,14 @@ namespace Zenject
         }
 
         public void BindTickableExecutionOrder<T>(int order)
-            where T : ITickable
+            where T : IFixedTickable
         {
             BindTickableExecutionOrder(typeof(T), order);
         }
 
         public void BindTickableExecutionOrder(Type type, int order)
         {
-            Assert.That(type.DerivesFrom<ITickable>(),
+            Assert.That(type.DerivesFrom<IFixedTickable>(),
                 "Expected type '{0}' to derive from ITickable", type);
 
             BindInstance(

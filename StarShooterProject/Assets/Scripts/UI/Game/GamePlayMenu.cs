@@ -5,7 +5,7 @@ using Zenject;
 
 namespace StarShooter.Unity.UI.Game
 {
-    public class GameMenu : MonoBehaviour
+    public class GamePlayMenu : MonoBehaviour
     {
 
         [SerializeField] private Text LivesCountLabel;

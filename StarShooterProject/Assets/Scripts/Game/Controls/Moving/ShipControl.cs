@@ -10,6 +10,16 @@ namespace StarShooter.Unity.Game.Controls
     {
         public event Action<float> OnChange;
         private float _currentValue = 0;
+        private float CurrentValue
+        {
+            get { return _currentValue; }
+
+            set
+            {
+                _currentValue = value;
+                OnChange?.Invoke(_currentValue);
+            }
+        }
         private readonly IInputManager _inputManager;
         private readonly GameActions _negativeAction;
         private readonly GameActions _positiveAction;
@@ -29,31 +39,28 @@ namespace StarShooter.Unity.Game.Controls
             _inputManager.RemoveKeyListener((int)_positiveAction, ProcessPositive);
         }
 
-
         public void ProcessNegative(KeyState state)
         {
             if (state == KeyState.Down)
             {
-                _currentValue -= 1;
+                CurrentValue -= 1;
             }
             if (state == KeyState.Up)
             {
-                _currentValue += 1;
+                CurrentValue += 1;
             }
-            OnChange?.Invoke(_currentValue);
         }
 
         public void ProcessPositive(KeyState state)
         {
             if (state == KeyState.Down)
             {
-                _currentValue += 1;
+                CurrentValue += 1;
             }
             if (state == KeyState.Up)
             {
-                _currentValue -= 1;
-            }
-            OnChange?.Invoke(_currentValue);
+                CurrentValue -= 1;
+            }            
         }
     }
 
@@ -68,12 +75,20 @@ namespace StarShooter.Unity.Game.Controls
         public ShipControl(IInputManager inputManager)
         {
             _inputManager = inputManager;
-
-            new AxisControl(inputManager, GameActions.Down, GameActions.Up).OnChange += (y) => _moveVector.y = y;
-            new AxisControl(inputManager, GameActions.Left, GameActions.Right).OnChange += (x) => _moveVector.x = x;
+            new AxisControl(inputManager, GameActions.Down, GameActions.Up).OnChange += ProcessYAxis;
+            new AxisControl(inputManager, GameActions.Left, GameActions.Right).OnChange += ProcessXAxis;
 
         }
-    
+
+        private void ProcessYAxis(float y)
+        {
+            _moveVector.y = y;
+        }
+
+        private void ProcessXAxis(float x)
+        {
+            _moveVector.x = x;
+        }
     }
 
 

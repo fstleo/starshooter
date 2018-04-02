@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarShooterProject.Plugins", "StarShooterProject.Plugins.csproj", "{C63478D6-2F0D-2B41-4AC9-BA72CEC056B4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarShooterProject", "StarShooterProject.csproj", "{D6FE4B70-3B1C-210A-903A-33DEE0197ECE}"

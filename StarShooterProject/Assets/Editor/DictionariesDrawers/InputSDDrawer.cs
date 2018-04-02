@@ -1,4 +1,4 @@
-﻿using StarShooter.GameManagement.GamesListSource;
+﻿using StarShooter.Input;
 using StarShooter.Unity.Game.Controls;
 using UnityEditor;
 using UnityEngine;

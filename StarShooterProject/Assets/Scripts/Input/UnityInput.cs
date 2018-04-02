@@ -3,24 +3,25 @@ using StarShooter.Input.Enums;
 using StarShooter.Input.Interfaces;
 using UnityEngine;
 using Zenject;
+using UnityEngine.EventSystems;
 
-namespace StarShooter.Unity.Input
+namespace StarShooter.Unity.InputSystem
 {
     public class UnityInput : INativeInput, ITickable
     {
-        public event Action OnAnyKeyPress;
+        public event Action OnTick;
 
-        public KeyState GetKeyState(KeyCode code)
+        public KeyState GetKeyState(int code)
         {
-            if (UnityEngine.Input.GetKeyDown(code))
+            if (UnityEngine.Input.GetKeyDown((KeyCode)code))
             {
                 return KeyState.Down;
             }
-            if (UnityEngine.Input.GetKey(code))
+            if (UnityEngine.Input.GetKey((KeyCode)code))
             {
                 return KeyState.Pressed;
             }
-            if (UnityEngine.Input.GetKeyUp(code))
+            if (UnityEngine.Input.GetKeyUp((KeyCode)code))
             {
                 return KeyState.Up;
             }
@@ -28,11 +29,8 @@ namespace StarShooter.Unity.Input
         }
 
         public void Tick()
-        {
-            if (UnityEngine.Input.anyKey)
-            {
-                OnAnyKeyPress?.Invoke();
-            }
+        {              
+            OnTick?.Invoke();
         }
     }
 }

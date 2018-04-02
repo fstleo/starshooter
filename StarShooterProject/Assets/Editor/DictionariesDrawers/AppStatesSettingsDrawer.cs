@@ -26,7 +26,7 @@ namespace StarShooter.Editor.Input
             }
             var s = (string)(object)value;
             int selected = scenes.IndexOf(s);
-            selected = selected == -1 ? 0 : selected;
+            selected = Mathf.Max(0, selected);
             selected = EditorGUI.Popup(rect, selected, scenes.ToArray());
             
             return (T)(object)scenes[selected];
